@@ -5,6 +5,7 @@ from ffmpy import FFmpeg
 
 def main():
 
+    destDirExists()
     urlBase = 'https://www.youtube.com' #Baseurl
     xpath = '//*[@id="watch7-sidebar-modules"]/div[1]/div/div[2]/ul/li/div[1]/a/span[1]'
     #Setting options for chromedriver
@@ -73,6 +74,9 @@ def main():
 
     driver.quit() #Quitting chromedriver
 
+def destDirExists():
+    if not os.path.isdir(os.getcwd()+'\mp3'):
+        os.mkdir('mp3')
 
 #Removing not wanted characters from title and removing text inside parentheses () and []
 def editTitle(title):
