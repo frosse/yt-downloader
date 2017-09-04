@@ -7,7 +7,7 @@ def main():
 
     destDirExists()
     urlBase = 'https://www.youtube.com' #Baseurl
-    xpath = '//*[@id="watch7-sidebar-modules"]/div[1]/div/div[2]/ul/li/div[1]/a/span[1]'
+    xpath = '//*[@id="thumbnail"]'
     #Setting options for chromedriver
     options = Options()
     #split arguments if needed
